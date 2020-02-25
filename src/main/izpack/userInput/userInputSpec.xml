@@ -9,5 +9,8 @@
       </spec>
       <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="user.name.fail" txt="user not given" />
     </field>
+    <field type="file" align="left" variable="file.name" label_position="both" control_position="both">
+      <spec txt="file.name" id="file.name" size="25" />
+    </field>
   </panel>
 </izpack:userinput>

@@ -4,4 +4,6 @@
   <str id="userinput.panel.id" txt="Applikation konfigurieren" />
   <str id="user.name" txt="Benutzername" />
   <str id="user.name.fail" txt="Benutzername darf nicht leer sein" />
+  <str id="file.name" txt="Datei" />
+  <str id="file.name.fail" txt="Datei existiert nicht" />
 </izpack:langpack>

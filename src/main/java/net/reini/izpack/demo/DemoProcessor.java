@@ -24,7 +24,11 @@ public class DemoProcessor implements Processor {
 
   @Override
   public String process(ProcessingClient client) {
-    return "gugus";
+    String text = client.getText();
+    if (text == null || text.isEmpty()) {
+      text = System.getProperty("user.name");
+    }
+    return text;
   }
 
 }

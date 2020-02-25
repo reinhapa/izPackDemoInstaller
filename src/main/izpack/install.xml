@@ -70,20 +70,20 @@
   </resources>
 
   <panels>
-    <panel classname="HelloPanel" />
-    <panel classname="LicencePanel" />
-    <panel classname="TargetPanel" />
+    <panel classname="HelloPanel" id="hello.panel.id" />
+    <panel classname="LicencePanel" id="licence.panel.id" />
+    <panel classname="TargetPanel" id="target.panel.id" />
     <panel classname="UserInputPanel" id="userinput.panel.id">
       <validator classname="net.reini.izpack.demo.DemoDataValidator" />
       <actions>
         <action stage="postvalidate" classname="net.reini.izpack.demo.DemoAction" />
       </actions>
     </panel>
-    <panel classname="PacksPanel" />
+    <panel classname="PacksPanel" id="packs.panel.id" />
     <panel classname="ProcessPanel" id="process.panel.id" />
-    <panel classname="SummaryPanel" />
-    <panel classname="InstallPanel" />
-    <panel classname="SimpleFinishPanel" />
+    <panel classname="SummaryPanel" id="summary.panel.id" />
+    <panel classname="InstallPanel" id="install.panel.id" />
+    <panel classname="FinishPanel" id="finish.panel.id" />
   </panels>
 
   <listeners>

@@ -7,7 +7,6 @@ import com.izforge.izpack.api.data.InstallData;
 import com.izforge.izpack.api.data.PanelActionConfiguration;
 import com.izforge.izpack.api.handler.AbstractUIHandler;
 import com.izforge.izpack.data.PanelAction;
-import com.izforge.izpack.gui.log.Log;
 import com.izforge.izpack.util.Librarian;
 
 /**
@@ -15,21 +14,21 @@ import com.izforge.izpack.util.Librarian;
  */
 public class DemoAction implements PanelAction {
 
-  private final Log log;
+  private final Logger log;
 
-  public DemoAction(Log log, Librarian librarian) {
-    Logger.getLogger(getClass().getName()).warning(String.format("DemoAction(%s, %s)", log.toString(), librarian.toString()));
-    this.log = log;
+  public DemoAction(Librarian librarian) {
+    log = Logger.getLogger(getClass().getName());
+    log.warning(String.format("DemoAction(%s, %s)", log.toString(), librarian.toString()));
   }
 
   @Override
   public void executeAction(InstallData adata, AbstractUIHandler handler) {
-    log.addCustomMessage("Demo action execute", new String[0]);
+    log.warning("Demo action execute");
   }
 
   @Override
   public void initialize(PanelActionConfiguration configuration) {
-    log.addCustomMessage("Demo action initialze", new String[0]);
+    log.warning("Demo action initialze");
   }
 
 }

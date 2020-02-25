@@ -12,8 +12,7 @@ import com.izforge.izpack.api.installer.DataValidator;
 public class DemoDataValidator implements DataValidator {
 
   public DemoDataValidator() {
-    Logger log = Logger.getLogger(getClass().getName());
-    log.warning("DemoDataValidator()");
+    Logger.getLogger(getClass().getName()).warning("DemoDataValidator()");
   }
 
   @Override
