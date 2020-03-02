@@ -17,6 +17,9 @@ public class DemoDataValidator implements DataValidator {
 
   @Override
   public Status validateData(InstallData installData) {
+    if ("peng".equals(installData.getVariable("user.name"))) {
+      return Status.ERROR;
+    }
     return Status.OK;
   }
 

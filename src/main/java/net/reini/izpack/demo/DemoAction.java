@@ -22,13 +22,13 @@ public class DemoAction implements PanelAction {
   }
 
   @Override
-  public void executeAction(InstallData adata, AbstractUIHandler handler) {
-    log.warning("Demo action execute");
+  public void initialize(PanelActionConfiguration configuration) {
+    log.warning("Demo action initialze");
   }
 
   @Override
-  public void initialize(PanelActionConfiguration configuration) {
-    log.warning("Demo action initialze");
+  public void executeAction(InstallData adata, AbstractUIHandler handler) {
+    log.warning("Demo action execute");
   }
 
 }

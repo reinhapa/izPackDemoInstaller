@@ -80,9 +80,9 @@
       </actions>
     </panel>
     <panel classname="PacksPanel" id="packs.panel.id" />
-    <panel classname="ProcessPanel" id="process.panel.id" />
     <panel classname="SummaryPanel" id="summary.panel.id" />
     <panel classname="InstallPanel" id="install.panel.id" />
+    <panel classname="ProcessPanel" id="process.panel.id" />
     <panel classname="FinishPanel" id="finish.panel.id" />
   </panels>
 

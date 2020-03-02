@@ -16,18 +16,16 @@ import com.izforge.izpack.panels.userinput.processorclient.ProcessingClient;
  * @author Patrick Reinhart
  */
 public class DemoProcessor implements Processor {
+  private Logger log = Logger.getLogger(getClass().getName());
 
   public DemoProcessor(InstallData installData) {
-    Logger log = Logger.getLogger(getClass().getName());
     log.warning(String.format("DemoProcessor(%s)", installData.toString()));
   }
 
   @Override
   public String process(ProcessingClient client) {
     String text = client.getText();
-    if (text == null || text.isEmpty()) {
-      text = System.getProperty("user.name");
-    }
+    log.warning("process: " + text);
     return text;
   }
 
