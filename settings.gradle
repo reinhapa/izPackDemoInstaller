@@ -1,0 +1,9 @@
+pluginManagement {
+  repositories {
+    maven {
+      url "${artifactory_gradle_cache}"
+    }
+  }
+}
+
+rootProject.name = 'izPackDemoInstaller'

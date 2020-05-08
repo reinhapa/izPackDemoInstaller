@@ -1,0 +1,48 @@
+plugins {
+  id 'java-library'
+  id 'com.bmuschko.izpack' version '3.0'
+}
+
+ext {
+  installerRes = file("$buildDir/installer.res")
+}
+
+repositories {
+  maven {
+    url "${artifactory_bison_process_repo}"
+  }
+}
+
+sourceSets.main.resources {
+  exclude "**/izpack/*"
+}
+
+configurations {
+  izpack
+  installer
+}
+
+dependencies {
+  izpack "org.codehaus.izpack:izpack-ant:5.1.3"
+  
+  implementation 'org.codehaus.izpack:izpack-api:5.1.3'
+  implementation 'org.codehaus.izpack:izpack-core:5.1.3'
+  implementation 'org.codehaus.izpack:izpack-panel:5.1.3'
+
+  installer configurations.compile
+}
+
+izpack {
+  baseDir = file("src/main/izpack")
+  compression = 'deflate'
+  compressionLevel = 9
+  appProperties = ['copyright.holder': 'Patrick Reinhart',
+                   'copyright.email': 'patrick@reini.net',
+                   'copyright.year': '2019',
+                   'product.name': 'izPack Demo Product', 
+                   'product.version' : version,
+                   'product.url' : 'http://www.reini.net',
+                   'product.subpath': 'izPackDemoProduct',
+                   'install.res': installerRes,
+                   'install.jar': file("$buildDir/libs/izPackDemoInstaller-${version}.jar")]
+}

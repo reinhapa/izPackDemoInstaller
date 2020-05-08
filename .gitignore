@@ -12,3 +12,16 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+# Ignore Eclipse specific files
+.settings
+.project
+.classpath
+bin
+
+# Ignore IntelliJ specific files
+.idea
+*.iml
+
+# Ignore Mac cache files
+.DS_Store
