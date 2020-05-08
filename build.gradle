@@ -9,9 +9,7 @@ ext {
 
 repositories {
   mavenLocal()
-  maven {
-    url "${artifactory_bison_process_repo}"
-  }
+  mavenCentral()
 }
 
 sourceSets.main.resources {
@@ -25,7 +23,7 @@ configurations {
 
 dependencies {
   izpack "org.codehaus.izpack:izpack-ant:${rev_izpack}"
-  
+
   implementation "org.codehaus.izpack:izpack-api:${rev_izpack}"
   implementation "org.codehaus.izpack:izpack-core:${rev_izpack}"
   implementation "org.codehaus.izpack:izpack-panel:${rev_izpack}"
