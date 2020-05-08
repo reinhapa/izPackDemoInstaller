@@ -15,15 +15,26 @@
     <field type="file" align="left" variable="file.name">
       <spec txt="file.name" id="file.name" size="25" />
     </field>
-    <!-- simple divider -->
+    <!-- simple divider and space -->
     <field type="divider" />
+    <field type="space" />
     <!-- check box sets a variable, variable is used by a dynamic variable condition -->
     <!-- text input enabled by a dynamic variable condition -->
     <field type="text" txt="userinput.panel.id" variable="file.name" readonlyCondition="!need.input.text">
       <spec txt="input text" id="input.text" size="50" prefY="10" allowEmptyValue="true"/>
     </field>
     <field type="check" variable="input.text.check">
+      <description txt="this is a description for the checkbox" id="description.checkbox"/>
       <spec txt="check.box" id="check.box.label" set="false"/>
+    </field>
+    <field type="radio" variable="radioSelection">
+      <description txt="This is a description for radio buttons" id="description.radio"/>
+      <spec>
+        <choice txt="the first choice" id="radio.button.label.1" value="1 selected" />
+        <choice txt="the second choice" id="radio.button.label.2" value="2 selected" set="true" />
+        <choice txt="the third choice" id="radio.button.label.3" value="3 selected" />
+        <choice txt="the fourth choice" id="radio.button.label.4" value="4 selected" />
+      </spec>
     </field>
   </panel>
 </izpack:userinput>

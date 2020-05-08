@@ -6,6 +6,12 @@
   <str id="user.name.fail" txt="User name must not be empty" />
   <str id="file.name" txt="File" />
   <str id="file.name.fail" txt="File does not exist" />
+  <str id="description.checkbox" txt="Beschreibender Text fuer die Checkbox"/>
   <str id="check.box" txt="Enhanced config" />
   <str id="check.box.label" txt="Additional text" />
+  <str id="description.radio" txt="Beschreibender Text fuer die Radiobox"/>
+  <str id="radio.button.label.1" txt="the first choice" />
+  <str id="radio.button.label.2" txt="the second choice" />
+  <str id="radio.button.label.3" txt="the third choice" />
+  <str id="radio.button.label.4" txt="the fourth choice" />
 </izpack:langpack>
