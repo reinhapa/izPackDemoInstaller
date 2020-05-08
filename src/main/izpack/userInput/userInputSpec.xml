@@ -2,15 +2,28 @@
 <izpack:userinput version="5.0" xmlns:izpack="http://izpack.org/schema/userinput" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://izpack.org/schema/userinput http://izpack.org/schema/5.0/izpack-userinput-5.0.xsd">
   <panel id="userinput.panel.id">
+    <!-- title of the panel -->
     <field type="title" txt="userinput.panel.id" id="userinput.panel.id" />
+    <!-- first input field -->
     <field type="text" variable="user.name">
       <spec txt="user.name" id="user.name" size="25">
         <processor class="net.reini.izpack.demo.DemoProcessor"/>
       </spec>
       <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="user.name.fail" txt="user not given" />
     </field>
-    <field type="file" align="left" variable="file.name" label_position="both" control_position="both">
+    <!-- second input field -->
+    <field type="file" align="left" variable="file.name">
       <spec txt="file.name" id="file.name" size="25" />
+    </field>
+    <!-- simple divider -->
+    <field type="divider" />
+    <!-- check box sets a variable, variable is used by a dynamic variable condition -->
+    <!-- text input enabled by a dynamic variable condition -->
+    <field type="text" txt="userinput.panel.id" variable="file.name" readonlyCondition="!need.input.text">
+      <spec txt="input text" id="input.text" size="50" prefY="10" allowEmptyValue="true"/>
+    </field>
+    <field type="check" variable="input.text.check">
+      <spec txt="check.box" id="check.box.label" set="false"/>
     </field>
   </panel>
 </izpack:userinput>

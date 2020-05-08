@@ -47,6 +47,19 @@
     <variable name="product.version" value="@{product.version}" />
   </variables>
 
+<!-- 
+  <dynamicvariables>
+    <variable name="input.text.check" value="" />
+  </dynamicvariables>
+-->
+
+  <conditions>
+    <condition type="variable" id="need.input.text">
+      <name>input.text.check</name>
+      <value>true</value>
+    </condition>
+  </conditions>
+
   <dynamicvariables>
     <variable name="data.dir" value="${INSTALL_PATH}/data">
       <filters>

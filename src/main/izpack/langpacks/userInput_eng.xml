@@ -6,4 +6,6 @@
   <str id="user.name.fail" txt="User name must not be empty" />
   <str id="file.name" txt="File" />
   <str id="file.name.fail" txt="File does not exist" />
+  <str id="check.box" txt="Enhanced config" />
+  <str id="check.box.label" txt="Additional text" />
 </izpack:langpack>

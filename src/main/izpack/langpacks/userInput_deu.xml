@@ -6,4 +6,6 @@
   <str id="user.name.fail" txt="Benutzername darf nicht leer sein" />
   <str id="file.name" txt="Datei" />
   <str id="file.name.fail" txt="Datei existiert nicht" />
+  <str id="check.box" txt="Erweiterte Konfiguration" />
+  <str id="check.box.label" txt="Zusaetzlicher Text" />
 </izpack:langpack>
