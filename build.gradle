@@ -60,3 +60,5 @@ izpack {
 }
 
 izPackCreateInstaller.dependsOn  = ['jar']
+
+defaultTasks 'izPackCreateInstaller'
