@@ -74,6 +74,7 @@
     <res id="userInputSpec.xml" src="userInput/userInputSpec.xml" />
     <res id="ProcessPanel.Spec.xml" src="process/processSpec.xml" />
     <res id="LicencePanel.licence" src="licenses/full_licenses.txt" parse="yes" />
+    <res id="shortcutSpec.xml" src="resources/default_shortcut_spec.xml"/>
     <!-- German -->
     <res id="userInputLang.xml_deu" src="langpacks/userInput_deu.xml" parse="yes" />
     <res id="packsLang.xml_deu" src="langpacks/packs_deu.xml" parse="yes" />
@@ -93,6 +94,7 @@
       </actions>
     </panel>
     <panel classname="PacksPanel" id="packs.panel.id" />
+    <panel classname="ShortcutPanel" id="shortcut.panel.id" />
     <panel classname="SummaryPanel" id="summary.panel.id" />
     <panel classname="InstallPanel" id="install.panel.id" />
     <panel classname="ProcessPanel" id="process.panel.id" />
