@@ -42,7 +42,7 @@ public class DemoProcess {
     List<String> argumentList = Arrays.asList(arguments);
     log.warning(String.format("DemoProcess.run(%s, %s) with 30 second delay", handler.toString(), argumentList));
     try {
-      TimeUnit.SECONDS.sleep(30);
+      TimeUnit.SECONDS.sleep(1);
     } catch (InterruptedException e) {
       log.log(Level.SEVERE, "Unexpected interruption", e);
     }

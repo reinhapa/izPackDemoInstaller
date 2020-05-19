@@ -35,23 +35,21 @@ import com.izforge.izpack.util.Librarian;
 /**
  * @author Patrick Reinhart
  */
-public class DemoAction implements PanelAction {
-
+public class DemoPostValidateAction implements PanelAction {
   private final Logger log;
 
-  public DemoAction(Librarian librarian) {
+  public DemoPostValidateAction(Librarian librarian) {
     log = Logger.getLogger(getClass().getName());
     log.warning(String.format("DemoAction(%s, %s)", log.toString(), librarian.toString()));
   }
 
   @Override
   public void initialize(PanelActionConfiguration configuration) {
-    log.warning("Demo action initialze");
+    log.warning("Demo post validate action initialze");
   }
 
   @Override
   public void executeAction(InstallData adata, AbstractUIHandler handler) {
-    log.warning("Demo action execute");
+    log.warning("Demo post validate action execute");
   }
-
 }
