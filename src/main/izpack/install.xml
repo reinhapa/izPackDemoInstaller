@@ -45,13 +45,8 @@
     <variable name="copyright.holder" value="@{copyright.holder}" />
     <variable name="product.name" value="@{product.name}" />
     <variable name="product.version" value="@{product.version}" />
+    <variable name="variable" value="initialValue" />
   </variables>
-
-<!-- 
-  <dynamicvariables>
-    <variable name="input.text.check" value="" />
-  </dynamicvariables>
--->
 
   <conditions>
     <condition type="variable" id="need.input.text">
