@@ -18,16 +18,21 @@
     <!-- simple divider and space -->
     <field type="divider" />
     <field type="space" />
-    <!-- check box sets a variable, variable is used by a dynamic variable condition -->
-    <!-- text input enabled by a dynamic variable condition -->
-    <field type="text" txt="userinput.panel.id" variable="file.name" readonlyCondition="!need.input.text">
-      <spec txt="input text" id="input.text" size="50" prefY="10" allowEmptyValue="true"/>
-    </field>
     <field type="check" variable="input.text.check">
       <description txt="this is a description for the checkbox" id="description.checkbox"/>
       <spec txt="check.box" id="check.box.label" set="false"/>
     </field>
-    <field type="radio" variable="radioSelection">
+    <!-- check box sets a variable, variable is used by a dynamic variable condition -->
+    <!-- text input enabled by a dynamic variable condition -->
+    <field type="textarea" txt="userarea.panel.id" variable="text.name" conditionid="need.input.text">
+      <description txt="This is a description for text area" id="description.area"/>
+      <spec txt="input area" id="input.text" size="50" height="-1" allowEmptyValue="true"/>
+    </field>
+    <field type="text" txt="userinput.panel.id" variable="file.name" conditionid="need.input.text">
+      <description txt="This is a description for text field" id="description.text"/>
+      <spec txt="input text" id="input.text" size="50" allowEmptyValue="true"/>
+    </field>
+    <field type="radio" variable="radioSelection" conditionid="need.input.text">
       <description txt="This is a description for radio buttons" id="description.radio"/>
       <spec>
         <choice txt="the first choice" id="radio.button.label.1" value="1 selected" />
