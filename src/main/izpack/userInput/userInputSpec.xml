@@ -15,8 +15,16 @@
     <field type="file" align="left" variable="file.name">
       <spec txt="file.name" id="file.name" size="25" />
     </field>
-    <!-- simple divider and space -->
+    <!-- simple divider -->
     <field type="divider" />
+    <field type="password" variable="user.password">
+      <spec set="abc">
+        <pwd txt="Enter password" size="8"/>
+        <pwd txt="Re-enter password" size="8"/>
+      </spec>
+      <validator class="com.izforge.izpack.panels.userinput.validator.PasswordEqualityValidator" txt="Passwords must match"/>
+    </field>
+    <!-- simple space -->
     <field type="space" />
     <field type="check" variable="input.text.check">
       <description txt="this is a description for the checkbox" id="description.checkbox"/>
