@@ -24,7 +24,7 @@
 plugins {
   id 'java-library'
   id 'com.bmuschko.izpack' version '3.0'
-  id 'org.kordamp.gradle.java-project' version '0.38.0'
+  id 'org.kordamp.gradle.java-project' version '0.39.0'
 }
 
 ext {
