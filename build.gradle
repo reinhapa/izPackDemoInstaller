@@ -24,7 +24,7 @@
 plugins {
   id 'java-library'
   id 'com.bmuschko.izpack' version '3.0'
-  id 'org.kordamp.gradle.java-project' version '0.39.0'
+  id 'org.kordamp.gradle.java-project' version '0.43.0'
 }
 
 ext {
@@ -100,7 +100,17 @@ defaultTasks 'izPackCreateInstaller'
 
 config {
     release = (rootProject.findProperty('release') ?: false).toBoolean()
-
+    docs {
+        javadoc {
+            autoLinks {
+                excludes = [ 
+                    'izpack-api-5.2.0-SNAPSHOT',
+                    'izpack-core-5.2.0-SNAPSHOT',
+                    'izpack-panel-5.2.0-SNAPSHOT'
+                ]
+            }
+        }
+    }
     info {
         vendor = 'reinhapa'
         name = 'izPackDemoInstaller'
