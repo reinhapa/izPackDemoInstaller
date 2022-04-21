@@ -32,6 +32,7 @@
     <modifier key="headingPanelCounter" value="progressbar" />
     <modifier key="headingPanelCounterPos" value="inHeading" />
     <modifier key="labeFontSize" value="14" />
+    <modifier key="showDebugWindow" value="true" />
   </guiprefs>
 
   <locale>
@@ -46,6 +47,7 @@
     <variable name="product.name" value="@{product.name}" />
     <variable name="product.version" value="@{product.version}" />
     <variable name="variable" value="initialValue" />
+    <variable name="variableTwo" value="value-with-dashes" />
   </variables>
 
   <conditions>
@@ -59,6 +61,11 @@
     <variable name="data.dir" value="${INSTALL_PATH}/data">
       <filters>
         <regex regexp="\\" replace="/" global="true" />
+      </filters>
+    </variable>
+    <variable name="variableThree" value="${variableTwo}">
+      <filters>
+        <regex regexp="\." replace="-" global="true" />
       </filters>
     </variable>
   </dynamicvariables>
