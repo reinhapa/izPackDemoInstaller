@@ -2,7 +2,9 @@
 <izpack:langpack version="5.0" xmlns:izpack="http://izpack.org/schema/langpack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://izpack.org/schema/langpack http://izpack.org/schema/5.0/izpack-langpack-5.0.xsd">
   <str id="userinput.panel.id" txt="Applikation konfigurieren" />
+  <str id="userinput.panel.summary" txt="Applikation Konnfiguration Zusammenfassung" />
   <str id="user.name" txt="Benutzername" />
+  <str id="user.name.summary" txt="Benutzername:" />
   <str id="user.name.fail" txt="Benutzername darf nicht leer sein" />
   <str id="file.name" txt="Datei" />
   <str id="file.name.fail" txt="Datei existiert nicht" />

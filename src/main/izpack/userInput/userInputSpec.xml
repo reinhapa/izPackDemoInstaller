@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <izpack:userinput version="5.0" xmlns:izpack="http://izpack.org/schema/userinput" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://izpack.org/schema/userinput http://izpack.org/schema/5.0/izpack-userinput-5.0.xsd">
-  <panel id="userinput.panel.id">
+  <panel id="userinput.panel.id" summaryKey="userinput.panel.summary">
     <!-- title of the panel -->
     <field type="title" txt="userinput.panel.id" id="userinput.panel.id" />
     <!-- first input field -->
-    <field type="text" variable="user.name">
+    <field type="text" variable="user.name" summaryKey="user.name.summary">
       <spec txt="user.name" id="user.name" size="25">
         <processor class="net.reini.izpack.demo.DemoProcessor"/>
       </spec>
