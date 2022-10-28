@@ -23,6 +23,7 @@
  */
 package net.reini.izpack.demo;
 
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import com.izforge.izpack.api.data.InstallData;
@@ -36,7 +37,10 @@ public class DemoProcessor implements Processor {
   private Logger log = Logger.getLogger(getClass().getName());
 
   public DemoProcessor(InstallData installData) {
-    log.warning(String.format("DemoProcessor(%s)", installData.toString()));
+    log.warning(String.format("DemoProcessor"));
+    for (Entry<Object,Object> entry : installData.getVariables().getProperties().entrySet()) {
+      log.warning(String.format("%s=%s", entry.getKey(), entry.getValue()));
+    }
   }
 
   @Override

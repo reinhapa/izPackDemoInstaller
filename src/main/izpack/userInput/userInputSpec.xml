@@ -6,14 +6,14 @@
     <field type="title" txt="userinput.panel.id" id="userinput.panel.id" />
     <!-- first input field -->
     <field type="text" variable="user.name" summaryKey="user.name.summary">
-      <spec txt="user.name" id="user.name" size="25">
+      <spec txt="user.name" id="user.name" size="25" default="johnDoe">
         <processor class="net.reini.izpack.demo.DemoProcessor"/>
       </spec>
       <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="user.name.fail" txt="user not given" />
     </field>
     <!-- second input field -->
     <field type="file" align="left" variable="file.name">
-      <spec txt="file.name" id="file.name" size="25" />
+      <spec txt="file.name" id="file.name" size="25" default="true" />
     </field>
     <!-- simple divider -->
     <field type="divider" />
@@ -28,15 +28,15 @@
     <field type="space" />
     <field type="check" variable="input.text.check">
       <description txt="this is a description for the checkbox" id="description.checkbox"/>
-      <spec txt="check.box" id="check.box.label" set="false"/>
+      <spec txt="check.box" id="check.box.label" set="false" default="true"/>
     </field>
     <!-- check box sets a variable, variable is used by a dynamic variable condition -->
     <!-- text input enabled by a dynamic variable condition -->
-    <field type="textarea" txt="userarea.panel.id" variable="text.name" conditionid="need.input.text">
+    <field type="textarea" txt="userarea.panel.id" variable="input.text.area" conditionid="need.input.text">
       <description txt="This is a description for text area" id="description.area"/>
       <spec txt="input area" id="input.text" size="50" height="-1" allowEmptyValue="true"/>
     </field>
-    <field type="text" txt="userinput.panel.id" variable="file.name" conditionid="need.input.text">
+    <field type="text" txt="userinput.panel.id" variable="input.text" conditionid="need.input.text">
       <description txt="This is a description for text field" id="description.text"/>
       <spec txt="input text" id="input.text" size="50" allowEmptyValue="true"/>
     </field>
