@@ -39,7 +39,7 @@ public class DemoProcess {
   public boolean run(AbstractUIProcessHandler handler, String[] arguments) {
     Logger log = Logger.getLogger(getClass().getName());
     List<String> argumentList = Arrays.asList(arguments);
-    log.warning(String.format("DemoProcess.run(%s, %s) with 30 second delay", handler.toString(), argumentList));
+    log.warning(String.format("DemoProcess.run(%s, %s) with 30 second delay", handler.getClass().getName(), argumentList));
     try {
       TimeUnit.SECONDS.sleep(1);
     } catch (InterruptedException e) {

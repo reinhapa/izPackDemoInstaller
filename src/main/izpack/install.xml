@@ -90,13 +90,20 @@
     <panel classname="LicencePanel" id="licence.panel.id" />
     <panel classname="TargetPanel" id="target.panel.id" />
     <panel classname="UserInputPanel" id="userinput.panel.id">
-      <validator classname="net.reini.izpack.demo.DemoDataValidator" />
       <actions>
+        <action stage="preconstruct" classname="net.reini.izpack.demo.PreferencesAction">
+          <param name="variables" value="file.name input.text.check" />
+        </action>
         <action stage="preconstruct" classname="net.reini.izpack.demo.DemoPreConstructAction" />
         <action stage="preactivate" classname="net.reini.izpack.demo.DemoPreActivateAction" />
         <action stage="prevalidate" classname="net.reini.izpack.demo.DemoPreValidateAction" />
         <action stage="postvalidate" classname="net.reini.izpack.demo.DemoPostValidateAction" />
+        <action stage="postvalidate" classname="net.reini.izpack.demo.PreferencesAction">
+          <param name="store" value="true" />
+          <param name="variables" value="file.name input.text.check" />
+        </action>
       </actions>
+      <validator classname="net.reini.izpack.demo.DemoDataValidator" />
     </panel>
     <panel classname="PacksPanel" id="packs.panel.id" />
     <panel classname="ShortcutPanel" id="shortcut.panel.id" />
