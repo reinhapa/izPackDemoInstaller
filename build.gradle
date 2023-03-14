@@ -25,7 +25,6 @@ plugins {
   id 'eclipse'
   id 'java-library'
   id 'com.bmuschko.izpack' version '3.2'
-  id 'org.kordamp.gradle.java-project' version '0.49.0'
 }
 
 ext {
@@ -37,7 +36,6 @@ java {
 }
 
 repositories {
-  mavenLocal()
   maven {
     url 'https://oss.sonatype.org/content/repositories/snapshots'
   }
@@ -72,19 +70,6 @@ test {
   jvmArgs '-Duser.language=de', '-Duser.country=CH', '-Duser.timezone=Europe/Berlin', '-XX:-TieredCompilation'
 }
 
-dependencyUpdates.resolutionStrategy {
-  componentSelection { rules ->
-    rules.all { ComponentSelection selection ->
-      boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'preview', 'b', 'pr', 'ea'].any { qualifier ->
-        selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-+]*/
-      }
-      if (rejected) {
-        selection.reject('Release candidate')
-      }
-    }
-  }
-}
-
 izpack {
   baseDir = file("src/main/izpack")
   compression = 'deflate'
@@ -103,57 +88,3 @@ izpack {
 izPackCreateInstaller.dependsOn  = ['jar']
 
 defaultTasks 'izPackCreateInstaller'
-
-eclipse.classpath.downloadSources = true
-
-config {
-    release = (rootProject.findProperty('release') ?: false).toBoolean()
-    docs {
-        javadoc {
-            autoLinks {
-                excludes = [ 
-                    'izpack-api-5.2.0-SNAPSHOT',
-                    'izpack-core-5.2.0-SNAPSHOT',
-                    'izpack-panel-5.2.0-SNAPSHOT'
-                ]
-            }
-        }
-    }
-    info {
-        vendor = 'reinhapa'
-        name = 'izPackDemoInstaller'
-        description = 'Sample izPack based installer'
-        inceptionYear = '2019'
-        links {
-            website = 'https://github.com/reinhapa/izPackDemoInstaller'
-            issueTracker = 'https://github.com/reinhapa/izPackDemoInstaller/issues'
-            scm = 'https://github.com/reinhapa/izPackDemoInstaller.git'
-        }
-        scm {
-            connection = 'scm:git://github.com/reinhapa/izPackDemoInstaller.git'
-            developerConnection = 'scm:git://github.com/reinhapa/izPackDemoInstaller.git'
-            url = 'https://github.com/reinhapa/izPackDemoInstaller'
-        }
-        people {
-            person {
-                id = 'reinhapa'
-                name = 'Patrick Reinhart'
-                email = 'patrick@reini.net'
-                roles = [ 'developer', 'maintainer' ]
-            }
-        }
-    }
-    licensing {
-        licenses {
-            license {
-                id = 'MIT'
-            }
-        }
-    }
-}
-
-normalization {
-    runtimeClasspath {
-        ignore('/META-INF/MANIFEST.MF')
-    }
-}
