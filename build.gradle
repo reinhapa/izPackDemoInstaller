@@ -61,7 +61,7 @@ dependencies {
   implementation 'org.codehaus.izpack:izpack-panel:5.2.0-SNAPSHOT'
 
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
-  testImplementation 'org.junit.jupiter:junit-jupiter-migrationsupport:5.9.3'
+  testImplementation 'org.junit.jupiter:junit-jupiter-migrationsupport:5.10.0'
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
   testRuntimeOnly 'org.junit.platform:junit-platform-runner:1.10.0'
   testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.9.3'
