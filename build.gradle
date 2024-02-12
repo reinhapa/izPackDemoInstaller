@@ -58,7 +58,7 @@ dependencies {
 
   implementation 'org.codehaus.izpack:izpack-api:5.2.1-SNAPSHOT'
   implementation 'org.codehaus.izpack:izpack-core:5.2.1-SNAPSHOT'
-  implementation 'org.codehaus.izpack:izpack-panel:5.2.1-SNAPSHOT'
+  implementation 'org.codehaus.izpack:izpack-panel:5.2.2-SNAPSHOT'
 
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
   testImplementation 'org.junit.jupiter:junit-jupiter-migrationsupport:5.10.2'
