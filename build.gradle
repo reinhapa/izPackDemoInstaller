@@ -54,7 +54,7 @@ configurations {
 }
 
 dependencies {
-  izpack 'org.codehaus.izpack:izpack-ant:5.2.2-SNAPSHOT'
+  izpack 'org.codehaus.izpack:izpack-ant:5.2.3-SNAPSHOT'
 
   implementation 'org.codehaus.izpack:izpack-api:5.2.2-SNAPSHOT'
   implementation 'org.codehaus.izpack:izpack-core:5.2.2-SNAPSHOT'
