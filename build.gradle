@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2019-2023 Patrick Reinhart
+ * Copyright (c) 2019-2024 Patrick Reinhart
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -112,9 +112,9 @@ config {
         javadoc {
             autoLinks {
                 excludes = [ 
-                    'izpack-api-5.2.0-SNAPSHOT',
-                    'izpack-core-5.2.0-SNAPSHOT',
-                    'izpack-panel-5.2.0-SNAPSHOT'
+                    'izpack-api-5.2.3-SNAPSHOT',
+                    'izpack-core-5.2.3-SNAPSHOT',
+                    'izpack-panel-5.2.3-SNAPSHOT'
                 ]
             }
         }
