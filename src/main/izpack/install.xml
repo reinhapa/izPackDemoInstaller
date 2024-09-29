@@ -128,11 +128,20 @@
       <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="plain" />
       <file src="resources/sample.zip" targetdir="${INSTALL_PATH}/bin" unpack="true"/>
     </pack>
+    <refpack file="test.refpack.xml" />
   </packs>
+
+  <properties>
+    <property name="key" value="thevalue" />
+    <property file="@{java.home}/conf/logging.properties" />
+    <property file="properties/application.properties" />
+  </properties>
 
   <!-- The native libraries to add. This is required for creating shortcuts on Windows -->
   <natives>
-    <native type="izpack" name="ShellLink.dll" />
+    <native type="izpack" name="ShellLink.dll">
+      <os family="windows" />
+    </native>
   </natives>
 
 </izpack:installation>

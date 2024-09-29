@@ -34,7 +34,7 @@
     <!-- text input enabled by a dynamic variable condition -->
     <field type="textarea" txt="userarea.panel.id" variable="input.text.area" conditionid="need.input.text">
       <description txt="This is a description for text area" id="description.area"/>
-      <spec txt="input area" id="input.text" size="50" height="-1" allowEmptyValue="true"/>
+      <spec txt="input area" id="input.text" size="50" height="5" allowEmptyValue="true"/>
     </field>
     <field type="text" txt="userinput.panel.id" variable="input.text" conditionid="need.input.text">
       <description txt="This is a description for text field" id="description.text"/>

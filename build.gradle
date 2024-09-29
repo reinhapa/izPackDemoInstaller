@@ -97,7 +97,9 @@ izpack {
                    'product.url' : 'http://www.reini.net',
                    'product.subpath': 'izPackDemoProduct',
                    'install.res': installerRes,
-                   'install.jar': file("$buildDir/libs/izPackDemoInstaller-${version}.jar")]
+                   'install.jar': file("$buildDir/libs/izPackDemoInstaller-${version}.jar"),
+                   'java.home' : System.getProperty('java.home')
+  ]
 }
 
 izPackCreateInstaller.dependsOn  = ['jar']
