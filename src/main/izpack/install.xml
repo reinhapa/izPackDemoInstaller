@@ -6,6 +6,11 @@
     Ant properties in this file can be referenced with @{},
     otherwise use variables below in installer files with ${}
   -->
+  <properties>
+    <property name="property.dir" value="properties" />
+    <property file="${property.dir}/application.properties" />
+  </properties>
+
   <info>
     <appname>@{product.name}</appname>
     <appversion>@{product.version}</appversion>
