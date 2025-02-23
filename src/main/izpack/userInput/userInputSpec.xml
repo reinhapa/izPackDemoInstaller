@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<izpack:userinput version="5.0" xmlns:izpack="http://izpack.org/schema/userinput" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://izpack.org/schema/userinput http://izpack.org/schema/5.0/izpack-userinput-5.0.xsd">
+<izpack:userinput version="5.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:izpack="http://izpack.org/schema/userinput"
+                  xsi:schemaLocation="http://izpack.org/schema/userinput https://izpack.org/schema/5.0/izpack-userinput-5.0.xsd">
   <panel id="userinput.panel.id" summaryKey="userinput.panel.summary">
     <!-- title of the panel -->
     <field type="title" txt="userinput.panel.id" id="userinput.panel.id" />
@@ -26,6 +28,19 @@
     </field>
     <!-- simple space -->
     <field type="space" />
+    <!-- custom field that can be enhanced -->
+    <field type="custom" minRow="1" maxRow="10" variable="hosts.count">
+      <spec>
+        <col>
+          <field type="rule" variable="host">
+            <spec txt="host.entry" id="host.entry" default="${IP_ADDRESS}:7800" layout="O:20:U : N:10:10" resultFormat="displayFormat"/>
+          </field>
+          <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="host.empty" id="host.empty" />
+          <validator class="com.izforge.izpack.panels.userinput.validator.UniqueValidator" txt="host.unique" id="host.unique"/>
+        </col>
+      </spec>
+    </field>
+    <!-- checkbox -->
     <field type="check" variable="input.text.check">
       <description txt="this is a description for the checkbox" id="description.checkbox"/>
       <spec txt="check.box" id="check.box.label" set="false" default="true"/>

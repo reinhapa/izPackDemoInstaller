@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<izpack:langpack version="5.0" xmlns:izpack="http://izpack.org/schema/langpack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://izpack.org/schema/langpack http://izpack.org/schema/5.0/izpack-langpack-5.0.xsd">
+<izpack:langpack version="5.0"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:izpack="http://izpack.org/schema/langpack"
+                 xsi:schemaLocation="http://izpack.org/schema/langpack https://izpack.org/schema/5.0/izpack-langpack-5.0.xsd">
   <str id="userinput.panel.id" txt="Applikation konfigurieren" />
   <str id="userinput.panel.summary" txt="Applikation Konnfiguration Zusammenfassung" />
   <str id="user.name" txt="Benutzername" />
@@ -12,6 +14,9 @@
   <str id="check.box" txt="Erweiterte Konfiguration" />
   <str id="check.box.label" txt="Zusaetzlicher Text" />
   <str id="description.radio" txt="This is a description for the radio button"/>
+  <str id="host.empty" txt="Host leer"/>
+  <str id="host.entry" txt="Host"/>
+  <str id="host.unique" txt="Host nicht eindeutig"/>
   <str id="radio.button.label.1" txt="Auswahl eins" />
   <str id="radio.button.label.2" txt="Auswahl zwei" />
   <str id="radio.button.label.3" txt="Auswahl drei" />

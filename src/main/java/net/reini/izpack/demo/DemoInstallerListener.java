@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2019-2024 Patrick Reinhart
+ * Copyright (c) 2019-2025 Patrick Reinhart
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -45,6 +45,8 @@ public class DemoInstallerListener extends AbstractInstallerListener {
     log = Logger.getLogger(getClass().getName());
     log.warning(String.format("DemoInstallerListener(%s, %s)", housekeeper.toString(),
         installData.toString()));
+
+    List.of("a", "b", "c", "d", "e", "f", "g", "h").forEach(log::warning);
   }
 
   @Override

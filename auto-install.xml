@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="deu">
+    <com.izforge.izpack.panels.hello.HelloPanel id="hello.panel.id"/>
+    <com.izforge.izpack.panels.licence.LicencePanel id="licence.panel.id"/>
+    <com.izforge.izpack.panels.target.TargetPanel id="target.panel.id">
+        <installpath>/home/pr/izPackDemoProduct</installpath>
+    </com.izforge.izpack.panels.target.TargetPanel>
+    <com.izforge.izpack.panels.userinput.UserInputPanel id="userinput.panel.id">
+        <entry key="file.name" value="/home/pr/Firefox_wallpaper.png"/>
+        <entry key="user.password" value=""/>
+        <entry key="input.text.check" value="false"/>
+    </com.izforge.izpack.panels.userinput.UserInputPanel>
+    <com.izforge.izpack.panels.packs.PacksPanel id="packs.panel.id">
+        <pack index="0" name="Some content" selected="true"/>
+    </com.izforge.izpack.panels.packs.PacksPanel>
+    <com.izforge.izpack.panels.shortcut.ShortcutPanel id="shortcut.panel.id">
+        <createMenuShortcuts>false</createMenuShortcuts>
+        <programGroup>izPack Demo Product</programGroup>
+        <createDesktopShortcuts>false</createDesktopShortcuts>
+        <createStartupShortcuts>false</createStartupShortcuts>
+        <shortcutType>user</shortcutType>
+    </com.izforge.izpack.panels.shortcut.ShortcutPanel>
+    <com.izforge.izpack.panels.summary.SummaryPanel id="summary.panel.id"/>
+    <com.izforge.izpack.panels.install.InstallPanel id="install.panel.id"/>
+    <com.izforge.izpack.panels.process.ProcessPanel id="process.panel.id"/>
+    <com.izforge.izpack.panels.finish.FinishPanel id="finish.panel.id"/>
+</AutomatedInstallation>
