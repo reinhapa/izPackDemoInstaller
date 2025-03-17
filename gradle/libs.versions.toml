@@ -1,0 +1,20 @@
+[versions]
+izpack = '5.2.5-SNAPSHOT'
+izpack-plugin = '3.2'
+junit-jupiter = '5.11.3'
+junit-platform-runner = '1.12.1'
+kordamp-plugin = '0.54.0'
+
+[libraries]
+izpack-ant = { module = 'org.codehaus.izpack:izpack-ant', version.ref = 'izpack' }
+izpack-api = { module = 'org.codehaus.izpack:izpack-api', version.ref = 'izpack' }
+izpack-core = { module = 'org.codehaus.izpack:izpack-core', version.ref = 'izpack' }
+izpack-panel = { module = 'org.codehaus.izpack:izpack-panel', version.ref = 'izpack' }
+junit-jupiter-migrationsupport = { module = 'org.junit.jupiter:junit-jupiter-migrationsupport', version.ref = 'junit-jupiter' }
+junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', version.ref = 'junit-jupiter' }
+junit-vintage-engine = { module = 'org.junit.vintage:junit-vintage-engine', version.ref = 'junit-jupiter' }
+junit-platform-runner = { module = 'org.junit.platform:junit-platform-runner', version.ref = 'junit-platform-runner' }
+
+[plugins]
+izpack-plugin = { id = 'com.bmuschko.izpack', version.ref = 'izpack-plugin' }
+kordamp-plugin = { id = 'org.kordamp.gradle.java-project', version.ref = 'kordamp-plugin' }
