@@ -79,9 +79,11 @@
   <resources>
     <res id="installer.langsel.img" src="bison/langsel.png" />
     <res id="Heading.image" src="bison/northeast.png" />
+    <res id="HTMLHelloPanel.info" src="hello.html" />
     <res id="userInputSpec.xml" src="userInput/userInputSpec.xml" />
     <res id="ProcessPanel.Spec.xml" src="process/processSpec.xml" />
     <res id="LicencePanel.licence" src="licenses/full_licenses.txt" parse="yes" />
+    <res id="PDFLicencePanel.licence" src="licenses/full_licenses.pdf" parse="yes" />
     <res id="shortcutSpec.xml" src="resources/default_shortcut_spec.xml"/>
     <!-- German -->
     <res id="userInputLang.xml_deu" src="langpacks/userInput_deu.xml" parse="yes" />
