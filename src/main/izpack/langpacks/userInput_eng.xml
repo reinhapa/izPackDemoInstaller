@@ -6,8 +6,10 @@
   <str id="userinput.panel.id" txt="Application configuration" />
   <str id="userinput.panel.summary" txt="Application configuration summary" />
   <str id="user.name" txt="User name" />
+  <str id="user.name.description" txt="Here is a particularly long description of the user's input field, which should be automatically wrapped to the required lines on the input screen" />
   <str id="user.name.summary" txt="User name:" />
   <str id="user.name.fail" txt="User name must not be empty" />
+  <str id="user.text.static" txt="Here is a particularly long description of the user's input field, which should be automatically wrapped to the required lines on the input screen" />
   <str id="file.name" txt="File" />
   <str id="file.name.fail" txt="File does not exist" />
   <str id="description.checkbox" txt="Descriptive text for Checkbox"/>

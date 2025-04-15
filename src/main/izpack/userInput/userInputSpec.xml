@@ -7,7 +7,9 @@
     <!-- title of the panel -->
     <field type="title" txt="userinput.panel.id" id="userinput.panel.id" />
     <!-- first input field -->
+    <field type="staticText" align="left" id="user.text.static"/>
     <field type="text" variable="user.name" summaryKey="user.name.summary">
+      <description txt="user.name.description" id="user.name.description"/>
       <spec txt="user.name" id="user.name" size="25" default="johnDoe">
         <processor class="net.reini.izpack.demo.DemoProcessor"/>
       </spec>

@@ -6,8 +6,10 @@
   <str id="userinput.panel.id" txt="Applikation konfigurieren" />
   <str id="userinput.panel.summary" txt="Applikation Konnfiguration Zusammenfassung" />
   <str id="user.name" txt="Benutzername" />
+  <str id="user.name.description" txt="Hier ein besonders lang Beschreibung zum Eingabefeld des Benutzers, welches auf der Eingabemaske automatisch auf die entsprechend benötigten Zeilen umgebrochen werden sollte" />
   <str id="user.name.summary" txt="Benutzername:" />
   <str id="user.name.fail" txt="Benutzername darf nicht leer sein" />
+  <str id="user.text.static" txt="Hier ein besonders lang Beschreibung zum Eingabefeld des Benutzers, welches auf der Eingabemaske automatisch auf die entsprechend benötigten Zeilen umgebrochen werden sollte" />
   <str id="file.name" txt="Datei" />
   <str id="file.name.fail" txt="Datei existiert nicht" />
   <str id="description.checkbox" txt="This is a description for the checkbox"/>
