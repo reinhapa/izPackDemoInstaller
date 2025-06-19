@@ -26,6 +26,7 @@
         <pwd txt="Enter password" size="8"/>
         <pwd txt="Re-enter password" size="8"/>
       </spec>
+      <validator class="net.reini.izpack.demo.DemoFieldValidator"/>
       <validator class="com.izforge.izpack.panels.userinput.validator.PasswordEqualityValidator" txt="Passwords must match"/>
     </field>
     <!-- simple space -->
@@ -37,7 +38,7 @@
           <field type="rule" variable="host">
             <spec txt="host.entry" id="host.entry" default="${IP_ADDRESS}:7800" layout="O:20:U : N:10:10" resultFormat="displayFormat"/>
           </field>
-          <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="host.empty" id="host.empty" />
+          <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="host.empty" id="host.empty"/>
           <validator class="com.izforge.izpack.panels.userinput.validator.UniqueValidator" txt="host.unique" id="host.unique"/>
         </col>
       </spec>
