@@ -34,20 +34,19 @@ import com.izforge.izpack.panels.userinput.processorclient.ProcessingClient;
  * @author Patrick Reinhart
  */
 public class DemoProcessor implements Processor {
-  private Logger log = Logger.getLogger(getClass().getName());
+  private static final Logger LOG = Logger.getLogger(DemoProcessor.class.getName());
 
   public DemoProcessor(InstallData installData) {
-    log.warning(String.format("DemoProcessor"));
+    LOG.warning(() -> "DemoProcessor(%s)".formatted(installData));
     for (Entry<Object,Object> entry : installData.getVariables().getProperties().entrySet()) {
-      log.warning(String.format("%s=%s", entry.getKey(), entry.getValue()));
+      LOG.warning(() -> "%s=%s".formatted(entry.getKey(), entry.getValue()));
     }
   }
 
   @Override
   public String process(ProcessingClient client) {
     String text = client.getText();
-    log.warning("process: " + text);
+    LOG.warning(() -> "process: " + text);
     return text;
   }
-
 }

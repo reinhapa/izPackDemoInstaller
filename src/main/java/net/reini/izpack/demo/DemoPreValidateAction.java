@@ -34,19 +34,19 @@ import com.izforge.izpack.data.PanelAction;
  * @author Patrick Reinhart
  */
 public class DemoPreValidateAction implements PanelAction {
-  private final Logger log;
+  private static final Logger LOG = Logger.getLogger(DemoPreValidateAction.class.getName());
 
   public DemoPreValidateAction() {
-    log = Logger.getLogger(getClass().getName());
+    LOG.info("DemoPreValidateAction()");
   }
 
   @Override
   public void initialize(PanelActionConfiguration configuration) {
-    log.warning("Demo pre validate action initialze");
+    LOG.warning("Demo pre validate action initialize");
   }
 
   @Override
   public void executeAction(InstallData adata, AbstractUIHandler handler) {
-    log.warning("Demo pre validate action execute");
+    LOG.warning("Demo pre validate action execute");
   }
 }

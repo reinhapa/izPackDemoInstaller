@@ -33,10 +33,10 @@ import com.izforge.izpack.util.Housekeeper;
  * @author Patrick Reinhart
  */
 public class DemoUninstallerListener extends AbstractUninstallerListener {
+  private static final Logger LOG = Logger.getLogger(DemoUninstallerListener.class.getName());
 
   public DemoUninstallerListener(Housekeeper housekeeper, InstallData installData) {
-    Logger log = Logger.getLogger(getClass().getName());
-    log.warning(String.format("Constructor arguments: %s, %s", housekeeper.toString(), installData.toString()));
-    log.warning(String.format("Install dir: %s", installData.getVariable("INSTALL_PATH")));
+    LOG.info(() -> "DemoUninstallerListener(%s, %s)".formatted(housekeeper, installData));
+    LOG.warning(() -> "Install dir: %s".formatted(installData.getVariable("INSTALL_PATH")));
   }
 }

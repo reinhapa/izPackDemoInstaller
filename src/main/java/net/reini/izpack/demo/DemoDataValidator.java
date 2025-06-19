@@ -32,9 +32,10 @@ import com.izforge.izpack.api.installer.DataValidator;
  * @author Patrick Reinhart
  */
 public class DemoDataValidator implements DataValidator {
+  private static final Logger LOG = Logger.getLogger(DemoDataValidator.class.getName());
 
   public DemoDataValidator() {
-    Logger.getLogger(getClass().getName()).warning("DemoDataValidator()");
+    LOG.warning("DemoDataValidator()");
   }
 
   @Override
@@ -59,5 +60,4 @@ public class DemoDataValidator implements DataValidator {
   public boolean getDefaultAnswer() {
     return false;
   }
-
 }

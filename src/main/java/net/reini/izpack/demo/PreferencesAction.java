@@ -25,6 +25,7 @@ package net.reini.izpack.demo;
 
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.logging.Logger;
 import java.util.prefs.Preferences;
 
 import com.izforge.izpack.api.data.InstallData;
@@ -33,14 +34,20 @@ import com.izforge.izpack.api.handler.AbstractUIHandler;
 import com.izforge.izpack.data.PanelAction;
 
 public class PreferencesAction implements PanelAction {
+  private static final Logger LOG = Logger.getLogger(PreferencesAction.class.getName());
+
   private final Set<String> variableNames = new TreeSet<>();
 
   private boolean store;
   private Preferences prefs;
 
+  public PreferencesAction() {
+    LOG.info("PreferencesAction()");
+  }
 
   @Override
   public final void initialize(PanelActionConfiguration configuration) {
+    LOG.info(() -> "initialize(%s)".formatted(configuration));
     store = Boolean.parseBoolean(configuration.getProperty("store", "false"));
     final Preferences rootPrefs;
     if ("system".equalsIgnoreCase(configuration.getProperty("location", "user"))) {
@@ -59,6 +66,7 @@ public class PreferencesAction implements PanelAction {
 
   @Override
   public final void executeAction(InstallData data, AbstractUIHandler handler) {
+    LOG.info(() -> "executeAction(%s, %s)".formatted(data, handler));
     if (prefs != null && !variableNames.isEmpty()) {
       for (String variableName : variableNames) {
         if (store) {
