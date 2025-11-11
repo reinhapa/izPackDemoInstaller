@@ -1,6 +1,6 @@
 [versions]
 izpack = '6.0.0-SNAPSHOT'
-izpack-plugin = '3.2'
+izpack-plugin = '3.2.3'
 junit-jupiter = '6.0.1'
 junit-platform-runner = '1.14.1'
 kordamp-plugin = '0.54.0'
@@ -16,5 +16,5 @@ junit-vintage-engine = { module = 'org.junit.vintage:junit-vintage-engine', vers
 junit-platform-runner = { module = 'org.junit.platform:junit-platform-runner', version.ref = 'junit-platform-runner' }
 
 [plugins]
-izpack-plugin = { id = 'com.bmuschko.izpack', version.ref = 'izpack-plugin' }
+izpack-plugin = { id = 'org.izpack.gradle', version.ref = 'izpack-plugin' }
 kordamp-plugin = { id = 'org.kordamp.gradle.java-project', version.ref = 'kordamp-plugin' }
