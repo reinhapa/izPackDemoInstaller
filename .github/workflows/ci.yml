@@ -1,0 +1,35 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: ${{ matrix.os }} / OpenJDK ${{ matrix.jdk }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        jdk: ['21']
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v5
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'temurin'
+        java-version: ${{ matrix.jdk }}
+        cache: 'gradle'
+    - run: ./gradlew build --no-daemon
+    - uses: actions/upload-artifact@v5
+      if: ${{ always() }}
+      with:
+        name: ${{ matrix.os }}-jdk${{ matrix.jdk }}-build-logs
+        retention-days: 5
+        path: |
+          **/*.jfr
+          **/hs_err_pid*.log
+          **/build/reports/*
