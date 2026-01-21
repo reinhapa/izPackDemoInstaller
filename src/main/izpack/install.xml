@@ -10,6 +10,9 @@
   <properties>
     <property name="property.dir" value="properties" />
     <property file="${property.dir}/application.properties" />
+    <property name="key" value="thevalue" />
+    <property file="@{java.home}/conf/logging.properties" />
+    <property file="properties/application.properties" />
   </properties>
 
   <info>
@@ -136,12 +139,6 @@
     </pack>
     <refpack file="test.refpack.xml" />
   </packs>
-
-  <properties>
-    <property name="key" value="thevalue" />
-    <property file="@{java.home}/conf/logging.properties" />
-    <property file="properties/application.properties" />
-  </properties>
 
   <!-- The native libraries to add. This is required for creating shortcuts on Windows -->
   <natives>
