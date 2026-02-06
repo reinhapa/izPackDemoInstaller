@@ -28,18 +28,14 @@ plugins {
   alias libs.plugins.kordamp.plugin
 }
 
-ext {
-  installerRes = file("$buildDir/installer.res")
-}
-
 java {
   sourceCompatibility = JavaVersion.VERSION_21
 }
 
 repositories {
   mavenCentral()
-  maven { url = 'https://central.sonatype.com/repository/maven-snapshots/' }
   mavenLocal()
+  maven { url = 'https://central.sonatype.com/repository/maven-snapshots/' }
 }
 
 sourceSets.main.resources {
@@ -90,11 +86,11 @@ izpack {
                    'copyright.email': 'patrick@reini.net',
                    'copyright.year': '2019',
                    'product.name': 'izPack Demo Product', 
-                   'product.version' : version,
+                   'product.version' : version.toString(),
                    'product.url' : 'http://www.reini.net',
                    'product.subpath': 'izPackDemoProduct',
-                   'install.res': installerRes,
-                   'install.jar': file("$buildDir/libs/izPackDemoInstaller-${version}.jar"),
+                   'install.res': "${layout.buildDirectory.dir('installer.res').get().getAsFile()}",
+                   'install.jar': "${layout.buildDirectory.file("libs/izPackDemoInstaller-${version}.jar").get().getAsFile()}",
                    'java.home' : System.getProperty('java.home')
   ]
 }

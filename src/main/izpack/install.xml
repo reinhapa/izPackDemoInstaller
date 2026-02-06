@@ -26,6 +26,7 @@
     <summarylogfilepath>$INSTALL_PATH/InstallSummary.html</summarylogfilepath>
     <uninstaller name="uninstaller.jar" path="${INSTALL_PATH}/Uninstall" write="yes" />
     <javaversion>1.8</javaversion>
+    <pack-compression-format>xz</pack-compression-format>
     <!--
       <run-privileged/>
     -->
@@ -85,6 +86,7 @@
     <res id="userInputSpec.xml" src="userInput/userInputSpec.xml" />
     <res id="ProcessPanel.Spec.xml" src="process/processSpec.xml" />
     <res id="LicencePanel.licence" src="licenses/full_licenses.txt" parse="yes" />
+    <res id="HTMLInfoPanel.readme" src="readme.html"/>
     <res id="shortcutSpec.xml" src="resources/default_shortcut_spec.xml"/>
     <!-- German -->
     <res id="userInputLang.xml_deu" src="langpacks/userInput_deu.xml" parse="yes" />
@@ -97,6 +99,7 @@
   <panels>
     <panel classname="HelloPanel" id="hello.panel.id" />
     <panel classname="LicencePanel" id="licence.panel.id" />
+    <panel classname="HTMLInfoPanel" id="readme"/>
     <panel classname="TargetPanel" id="target.panel.id" />
     <panel classname="UserInputPanel" id="userinput.panel.id">
       <actions>
