@@ -2,7 +2,7 @@
 izpack = '6.0.0-SNAPSHOT'
 izpack-plugin = '3.2.3'
 junit-jupiter = '6.0.3'
-junit-platform-runner = '1.14.3'
+junit-platform-runner = '1.14.4'
 kordamp-plugin = '0.54.0'
 
 [libraries]
