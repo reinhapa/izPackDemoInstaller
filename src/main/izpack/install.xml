@@ -134,8 +134,8 @@
   <jar src="@{install.jar}" stage="both" />
 
   <packs>
-    <pack id="testpack" name="Some content" required="true" preselected="true">
-      <description>Contains some demo content</description>
+    <pack id="testpack" name="Test content" required="true" preselected="true">
+      <description>Demo content</description>
       <singlefile src="properties/application.properties" target="${INSTALL_PATH}/app/application.properties" />
       <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="plain" />
       <file src="resources/sample.zip" targetdir="${INSTALL_PATH}/bin" unpack="true"/>
