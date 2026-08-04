@@ -25,8 +25,8 @@ package net.reini.izpack.demo;
 
 import java.util.logging.Logger;
 
-import com.izforge.izpack.api.data.InstallData;
 import com.izforge.izpack.api.event.AbstractUninstallerListener;
+import com.izforge.izpack.api.resource.Resources;
 import com.izforge.izpack.util.Housekeeper;
 
 /**
@@ -34,9 +34,8 @@ import com.izforge.izpack.util.Housekeeper;
  */
 public class DemoUninstallerListener extends AbstractUninstallerListener {
 
-  public DemoUninstallerListener(Housekeeper housekeeper, InstallData installData) {
+  public DemoUninstallerListener(Housekeeper housekeeper, Resources resources) {
     Logger log = Logger.getLogger(getClass().getName());
-    log.warning(String.format("Constructor arguments: %s, %s", housekeeper.toString(), installData.toString()));
-    log.warning(String.format("Install dir: %s", installData.getVariable("INSTALL_PATH")));
+    log.warning(() -> "Constructor arguments: %s, %s".formatted(housekeeper, resources));
   }
 }

@@ -42,7 +42,7 @@ public class DemoPreConstructAction implements PanelAction {
 
   @Override
   public void executeAction(InstallData adata, AbstractUIHandler handler) {
-    log.warning("Demo pre construct action initialze");
+    log.warning("Demo pre construct action initialize");
   }
 
   @Override

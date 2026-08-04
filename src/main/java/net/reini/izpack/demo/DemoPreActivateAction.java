@@ -42,7 +42,7 @@ public class DemoPreActivateAction implements PanelAction {
 
   @Override
   public void initialize(PanelActionConfiguration configuration) {
-    log.warning("Demo pre activate action initialze");
+    log.warning("Demo pre activate action initialize");
   }
 
   @Override

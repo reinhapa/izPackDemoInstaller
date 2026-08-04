@@ -30,6 +30,7 @@ import com.izforge.izpack.api.data.InstallData;
 import com.izforge.izpack.api.data.Pack;
 import com.izforge.izpack.api.event.AbstractInstallerListener;
 import com.izforge.izpack.api.event.ProgressListener;
+import com.izforge.izpack.api.resource.Resources;
 import com.izforge.izpack.util.Housekeeper;
 
 /**
@@ -43,22 +44,20 @@ public class DemoInstallerListener extends AbstractInstallerListener {
     this.installData = installData;
     installData.setVariable("user.ident", "gugus");
     log = Logger.getLogger(getClass().getName());
-    log.warning(String.format("DemoInstallerListener(%s, %s)", housekeeper.toString(),
-        installData.toString()));
-
+    log.warning(() -> "DemoInstallerListener(%s, %s)".formatted(housekeeper, installData));
     List.of("a", "b", "c", "d", "e", "f", "g", "h").forEach(log::warning);
   }
 
   @Override
   public void beforePacks(List<Pack> packs) {
-    log.info("beforePacks: variable " + installData.getVariable("variable"));
-    log.info("beforePacks: data.dir " + installData.getVariable("data.dir"));
+    log.info(() -> "beforePacks: variable %s".formatted(installData.getVariable("variable")));
+    log.info(() -> "beforePacks: data.dir %s".formatted(installData.getVariable("data.dir")));
     installData.setVariable("variable", "beforePacks");
   }
 
   @Override
   public void afterPacks(List<Pack> packs, ProgressListener listener) {
-    log.info("afterPacks: variable " + installData.getVariable("variable"));
-    log.info("afterPacks: data.dir " + installData.getVariable("data.dir"));
+    log.info(() -> "afterPacks: variable %s".formatted(installData.getVariable("variable")));
+    log.info(() -> "afterPacks: data.dir %s".formatted(installData.getVariable("data.dir")));
   }
 }

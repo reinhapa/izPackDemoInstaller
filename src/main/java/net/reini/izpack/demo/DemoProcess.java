@@ -39,10 +39,11 @@ public class DemoProcess {
   public boolean run(AbstractUIProcessHandler handler, String[] arguments) {
     Logger log = Logger.getLogger(getClass().getName());
     List<String> argumentList = Arrays.asList(arguments);
-    log.warning(String.format("DemoProcess.run(%s, %s) with 30 second delay", handler.getClass().getName(), argumentList));
+    log.warning(() -> "DemoProcess.run(%s, %s) with 30 second delay".formatted(handler.getClass().getName(), argumentList));
     try {
       TimeUnit.SECONDS.sleep(1);
     } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
       log.log(Level.SEVERE, "Unexpected interruption", e);
     }
     return !argumentList.contains("fail");

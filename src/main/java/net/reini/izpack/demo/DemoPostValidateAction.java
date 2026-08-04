@@ -39,12 +39,12 @@ public class DemoPostValidateAction implements PanelAction {
 
   public DemoPostValidateAction(Librarian librarian) {
     log = Logger.getLogger(getClass().getName());
-    log.warning(String.format("DemoAction(%s, %s)", log.toString(), librarian.toString()));
+    log.warning(() -> "DemoAction(%s, %s)".formatted(log, librarian));
   }
 
   @Override
   public void initialize(PanelActionConfiguration configuration) {
-    log.warning("Demo post validate action initialze");
+    log.warning("Demo post validate action initialize");
   }
 
   @Override

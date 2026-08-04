@@ -37,16 +37,16 @@ public class DemoProcessor implements Processor {
   private Logger log = Logger.getLogger(getClass().getName());
 
   public DemoProcessor(InstallData installData) {
-    log.warning(String.format("DemoProcessor"));
+    log.warning("DemoProcessor");
     for (Entry<Object,Object> entry : installData.getVariables().getProperties().entrySet()) {
-      log.warning(String.format("%s=%s", entry.getKey(), entry.getValue()));
+      log.warning(() -> "%s=%s".formatted(entry.getKey(), entry.getValue()));
     }
   }
 
   @Override
   public String process(ProcessingClient client) {
     String text = client.getText();
-    log.warning("process: " + text);
+    log.warning(() -> "process: %s".formatted(text));
     return text;
   }
 

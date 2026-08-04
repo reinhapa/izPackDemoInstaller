@@ -58,6 +58,7 @@
     <variable name="product.version" value="@{product.version}" />
     <variable name="variable" value="initialValue" />
     <variable name="variableTwo" value="value-with-dashes" />
+    <variable name="Publisher" value="Reini DEV"/>
   </variables>
 
   <conditions>
@@ -97,7 +98,7 @@
   </resources>
 
   <panels>
-    <panel classname="HelloPanel" id="hello.panel.id" />
+    <panel classname="CheckedHelloPanel" id="hello.panel.id" />
     <panel classname="LicencePanel" id="licence.panel.id" />
     <panel classname="HTMLInfoPanel" id="readme"/>
     <panel classname="TargetPanel" id="target.panel.id" />
@@ -126,8 +127,14 @@
   </panels>
 
   <listeners>
+    <listener classname="RegistryInstallerListener" stage="install">
+      <os family="windows" />
+    </listener>
     <listener classname="SummaryLoggerInstallerListener" stage="install" />
     <listener classname="net.reini.izpack.demo.DemoInstallerListener" stage="install" />
+    <listener classname="RegistryUninstallerListener" stage="uninstall">
+      <os family="windows" />
+    </listener>
     <listener classname="net.reini.izpack.demo.DemoUninstallerListener" stage="uninstall" />
   </listeners>
 
@@ -138,6 +145,7 @@
       <description>Demo content</description>
       <singlefile src="properties/application.properties" target="${INSTALL_PATH}/app/application.properties" />
       <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="plain" />
+      <file src="resources/nut.jpg" targetdir="${INSTALL_PATH}/images" />
       <file src="resources/sample.zip" targetdir="${INSTALL_PATH}/bin" unpack="true"/>
     </pack>
     <refpack file="test.refpack.xml" />
@@ -147,6 +155,15 @@
   <natives>
     <native type="izpack" name="ShellLink.dll">
       <os family="windows" />
+    </native>
+    <native type="izpack" name="ShellLink_x64.dll">
+      <os family="windows" />
+    </native>
+    <native type="3rdparty" name="COIOSHelper.dll" uninstaller="true">
+      <os family="windows"/>
+    </native>
+    <native type="3rdparty" name="COIOSHelper_x64.dll" uninstaller="true">
+      <os family="windows"/>
     </native>
   </natives>
 
