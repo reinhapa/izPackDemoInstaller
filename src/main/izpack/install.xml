@@ -144,7 +144,9 @@
     <pack id="testpack" name="Test content" required="true" preselected="true">
       <description>Demo content</description>
       <singlefile src="properties/application.properties" target="${INSTALL_PATH}/app/application.properties" />
-      <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="plain" />
+      <singlefile src="properties/application.txt" target="${INSTALL_PATH}/app/application.txt" />
+      <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="javaprop" />
+      <parsable targetfile="${INSTALL_PATH}/app/application.txt" type="plain" />
       <file src="resources/nut.jpg" targetdir="${INSTALL_PATH}/images" />
       <file src="resources/sample.zip" targetdir="${INSTALL_PATH}/bin" unpack="true"/>
     </pack>
