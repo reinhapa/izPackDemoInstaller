@@ -6,6 +6,7 @@
   <str id="userinput.panel.id" txt="Applikation konfigurieren" />
   <str id="userinput.panel.summary" txt="Applikation Konnfiguration Zusammenfassung" />
   <str id="user.name" txt="Benutzername" />
+  <str id="user.name.tooltip" txt="Benutzername Tool Tip" />
   <str id="user.name.description" txt="Hier ein besonders lang Beschreibung zum Eingabefeld des Benutzers, welches auf der Eingabemaske automatisch auf die entsprechend benötigten Zeilen umgebrochen werden sollte" />
   <str id="user.name.summary" txt="Benutzername:" />
   <str id="user.name.fail" txt="Benutzername darf nicht leer sein" />
