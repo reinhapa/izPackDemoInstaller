@@ -61,6 +61,10 @@
     <variable name="variable" value="initialValue" />
     <variable name="variableTwo" value="value-with-dashes" />
     <variable name="Publisher" value="Reini DEV"/>
+    <variable name="jdkPath" value="${ENV[JAVA_HOME]}"/>
+    <variable name="JDKPathPanel.minVersion" value="21" />
+    <variable name="JDKPathPanel.maxVersion" value="25" />
+    <variable name="JDKPathPanel.skipIfValid" value="no" />
   </variables>
 
   <conditions>
@@ -101,6 +105,7 @@
 
   <panels>
     <panel classname="CheckedHelloPanel" id="hello.panel.id" />
+    <panel classname="JDKPathPanel" id="jdk.panel.id" />
     <panel classname="LicencePanel" id="licence.panel.id" />
     <panel classname="HTMLInfoPanel" id="readme"/>
     <panel classname="TargetPanel" id="target.panel.id" />
@@ -147,10 +152,12 @@
       <description>Demo content</description>
       <singlefile src="properties/application.properties" target="${INSTALL_PATH}/app/application.properties" />
       <singlefile src="properties/application.txt" target="${INSTALL_PATH}/app/application.txt" />
-      <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="javaprop" />
-      <parsable targetfile="${INSTALL_PATH}/app/application.txt" type="plain" />
       <file src="resources/nut.jpg" targetdir="${INSTALL_PATH}/images" />
       <file src="resources/sample.zip" targetdir="${INSTALL_PATH}/bin" unpack="true"/>
+      <file src="resources/sample.sql" targetdir="${INSTALL_PATH}/app"/>
+      <parsable targetfile="${INSTALL_PATH}/app/application.properties" type="javaprop" />
+      <parsable targetfile="${INSTALL_PATH}/app/application.txt" />
+      <parsable targetfile="${INSTALL_PATH}/app/sample.sql" encoding="ISO-8859-1" />
     </pack>
     <refpack file="test.refpack.xml" />
   </packs>
